@@ -4,16 +4,23 @@
 	sidebar
 ====================================================*/
 .sidebar {
-
 	.tag-cloud {
 		a {
-			border: 1px solid #e6e6e6;
-			padding: 3px 11px;
+			border: 0;
+			padding: 4px 12px;
 			color: #627e90;
 			line-height: 1.5em;
 			display: inline-block;
 			margin: 0 10px 10px 0;
 			border-radius: 2px;
+			font-size: 14px!important;
+			-webkit-transition: all .2s ease;
+			-moz-transition: all .2s ease;
+			-ms-transition: all .2s ease;
+			-o-transition: all .2s ease;
+			transition: all .2s ease;
+			background: #f2f3f5;
+
 			.transition(all 0.2s ease);
 			@media(max-width: 1000px) {
 				font-size: 0.77em !important;
@@ -31,7 +38,7 @@
 	}
 	.widget {
 		background: @white;
-		padding: 20px 25px;
+		padding: 20px;
 		@media(max-width: 800px) {
 			padding: 15px 20px !important;
 		}
@@ -83,6 +90,12 @@
 
 			input {
 				font-weight: 100;
+				transition: all .3s all;
+
+				&:hover{
+					background: #e5f9ff;
+					border-color: #bbd8e2;
+				}
 			}
 
 			.gh-subscribe-rss {
@@ -93,6 +106,25 @@
 		}
 
 		.series {
+			.recent-single-post{
+				overflow: hidden;
+				display: flex !important;
+    		align-items: center;
+			}
+			.series-image {
+				height: 50px;
+		    width: 50px;
+		    display: flex;
+		    align-items: center;
+		    background-size: cover!important;
+		    margin-right: 10px;
+		    min-width: 50px;
+		    border-radius: 50%;
+
+				@media(max-width: 1000px) {
+					display: none;
+				}
+			}
 			& > a {
 				display: none;
 			}
@@ -126,6 +158,9 @@
 				font-size: 12px;
 				opacity: 0.8;
 				margin: 0;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 	}

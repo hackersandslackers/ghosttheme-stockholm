@@ -24,9 +24,24 @@
 @import 'githubcard.less';
 @import 'kanban.less';
 @import 'code.less';
+@import 'social.less';
+@import 'swiper.less';
+
 /*====================================================
 	fonts
 ====================================================*/
+@font-face {
+font-family: "Font Awesome 5 Pro";
+font-weight: normal;
+font-style : normal;
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/5.1.1/fonts/fontawesome-webfont.eot?v=5.1.1");
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/5.1.1/fonts/fontawesome-webfont.eot?#iefix&v=5.1.1") format("embedded-opentype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/5.1.1/fonts/fontawesome-webfont.woff2?v=5.1.1") format("woff2"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/5.1.1/fonts/fontawesome-webfont.woff?v=5.1.1") format("woff"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/5.1.1/fonts/fontawesome-webfont.ttf?v=5.1.1") format("truetype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/5.1.1/fonts/fontawesome-webfont.svg?v=5.1.1#fontawesomeregular") format("svg");
+}
+
 @font-face {
 	font-family: 'akzidenz';
 	src: url("../fonts/akzidenzgrotesk-bq-light-regular.otf") format("opentype");
@@ -50,39 +65,7 @@
 /*====================================================
 	about author and comment and next-prev link
 ====================================================*/
-.page-about {
-	.about-author {
-		border: 1px solid #dcdcdc;
-		border-radius: 4px !important;
 
-		.bio {
-			float: left !important;
-			font-size: 14px;
-		}
-
-		i {
-			color: @text-color-light !important;
-		}
-
-		span {
-			color: @text-color-light;
-		}
-		@media(max-width: 1040px) {
-			width: 100% !important;
-
-			.meta-info {
-				display: flex;
-				justify-content: space-between;
-				width: 100%;
-				flex-wrap: wrap;
-			}
-
-			.bio {
-				float: none !important;
-			}
-		}
-	}
-}
 
 .prev-next-wrap {
 	text-align: center;
@@ -199,15 +182,6 @@ p {
 	flex-flow: row wrap;
 	margin: 0 40px 20px;
 
-	.about-author {
-		background-color: rgba(0, 6, 11, 0.78);
-		background-blend-mode: multiply;
-		color: @text-color;
-		@media(max-width: 600px) {
-			margin-bottom: 10px !important;
-		}
-	}
-
 	.meta-info {
 		color: @text-color;
 	}
@@ -236,24 +210,14 @@ p {
 	padding-top: 56% !important;
 }
 
-.page {
+.page-template {
 	margin-bottom: 0;
 
 	iframe {
 		margin: 0 auto !important;
 	}
 
-	.mobile-branding {
-		float: left;
-		margin: 9px 5px;
-		height: 40px;
-		width: 40px;
-		position: relative;
-		top: 0;
-		bottom: 0;
-		left: 10px;
-		z-index: 40;
-		display: none;
+
 
 		img {
 			width: inherit;
@@ -262,7 +226,7 @@ p {
 				cursor: pointer;
 			}
 		}
-	}
+
 
 	.post-title {
 		font-weight: 700;
@@ -273,7 +237,7 @@ p {
 	}
 }
 
-.page-template,
+.page-template-template,
 .post-template {
 	.mobile-branding {
 		@media(max-width: 800px) {

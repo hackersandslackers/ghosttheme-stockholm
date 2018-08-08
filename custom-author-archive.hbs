@@ -2,6 +2,7 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
 <section class="content-wrap archive">
+	{{> postheader}}
 	<div class="container">
 		<div class="row">
 			<!-- start main post area -->
@@ -23,7 +24,7 @@
  						{{#get "users" limit="all" include="count.posts" order="count.posts desc" }}
  							{{#foreach users}}
 
-								<div class="about-author" style="background: url({{cover_img}}) center center; background-color: rgba(255, 255, 255, 0.9); background-blend-mode: overlay;">
+								<div class="about-author">
 									<div class="author-specs">
 									{{#if profile_image}}
  										<a href="{{url}}" class="avatar-link"><img src="{{profile_image}}" alt="Author image" class="avatar"></a>
