@@ -11,7 +11,7 @@
 
 Theme for the [Ghost](https://github.com/TryGhost) blogging platform. Live preview can be seen here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
-![Stockholm Theme](https://miscellaneous.nyc3.digitaloceanspaces.com/stockholm.jpg)
+![Hackers And Slackers](https://storage.googleapis.com/hackersandslackersassets/share2.jpg)
 
 ### About
 
